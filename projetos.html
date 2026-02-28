@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <!-- Preconnect para performance de fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Leonardo Barbosa Burgomeister — Projetos</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Check theme preference before rendering
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.add('light');
+        }
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bbg: 'var(--color-bg)',
+                        bsurface: 'var(--color-surface)',
+                        baccent: 'var(--color-accent)',
+                        btext: 'var(--color-text)',
+                    },
+                    borderWidth: {
+                        '3': '3px',
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Projetos de UX/UI focados em otimização de sistemas, automação e interfaces corporativas por Leonardo Barbosa Burgomeister.">
+</head>
+
+<body
+    class="bg-bbg text-btext font-sans antialiased overflow-x-hidden selection:bg-baccent selection:text-btext min-h-screen flex flex-col">
+
+    <div class="noise"></div>
+
+    <!-- NAVIGATION MENU -->
+    <nav class="fixed top-0 w-full bg-bbg bg-opacity-95 border-b-3 border-btext z-40 backdrop-blur-sm" role="navigation"
+        aria-label="Navegação principal">
+        <!-- Loaded dynamically from components.js -->
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow max-w-[1200px] mx-auto px-6 lg:px-12 w-full pt-32 pb-16 z-10 relative">
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <!-- Brutalist Star Illustration -->
+            <svg class="absolute w-64 h-64 md:w-96 md:h-96 text-baccent opacity-[0.05] right-[-5%] top-[-10%] animate-[spin_30s_linear_infinite]"
+                viewBox="0 0 100 100" fill="currentColor">
+                <path d="M50 0 L55 45 L100 50 L55 55 L50 100 L45 55 L0 50 L45 45 Z" />
+            </svg>
+        </div>
+
+        <header class="border-b-3 border-btext pb-8 md:pb-12 mb-12 brutal-fade">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold uppercase tracking-tighter text-white mb-4"
+                data-i18n="proj_page_title">
+                PROJETOS SELECIONADOS
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl font-medium opacity-90 border-l-3 border-btext pl-4 md:pl-5 py-2">
+                <span data-i18n="proj_page_subtitle">Estudos de caso em Automação, Design de Serviço e UX/UI
+                    Corporativo.</span>
+            </p>
+        </header>
+
+        <section class="space-y-10">
+            <!-- Project 1: Whirlpool -->
+            <article class="bg-bsurface border-3 border-btext p-8 md:p-12 transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-[12px:12px:0px:0px_var(--color-text)] brutal-fade flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-grow">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-baccent border border-baccent px-2 py-1 bg-bbg">Whirlpool S.A. · 2023</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-tighter leading-none mb-4">
+                        Sistema de Gerenciamento de Pautas</h2>
+                    <p class="text-lg opacity-80 mb-8 max-w-3xl leading-relaxed">
+                        Análise e implementação de sistema de gestão de pautas para a Comunicação Institucional, substituindo planilhas por automação integrada.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-0">
+                        <span class="text-[10px] uppercase font-bold opacity-50 tracking-widest">Process Mapping</span>
+                        <span class="text-[10px] uppercase font-bold opacity-50 tracking-widest">Pipefy</span>
+                    </div>
+                </div>
+                <button data-project="whirlpool-pautas" class="project-btn w-full md:w-auto border-2 border-btext px-10 py-4 font-bold uppercase text-xs hover:bg-btext hover:text-bbg transition-all whitespace-nowrap">
+                    Estudo de Caso →
+                </button>
+            </article>
+
+            <!-- Project 2: WEG -->
+            <article class="bg-bsurface border-3 border-btext p-8 md:p-12 transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-[12px:12px:0px:0px_var(--color-text)] brutal-fade flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-grow">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-baccent border border-baccent px-2 py-1 bg-bbg">WEG Automação · 2025</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-tighter leading-none mb-4">
+                        Automação de Operações Internas</h2>
+                    <p class="text-lg opacity-80 mb-8 max-w-3xl leading-relaxed">
+                        Desenvolvimento de aplicativo interno e automação de fluxos operacionais utilizando Microsoft Power Platform e SharePoint.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-0">
+                        <span class="text-[10px] uppercase font-bold opacity-50 tracking-widest">Power Apps</span>
+                        <span class="text-[10px] uppercase font-bold opacity-50 tracking-widest">UI Design</span>
+                    </div>
+                </div>
+                <button data-project="weg-powerapps" class="project-btn w-full md:w-auto border-2 border-btext px-10 py-4 font-bold uppercase text-xs hover:bg-btext hover:text-bbg transition-all whitespace-nowrap">
+                    Estudo de Caso →
+                </button>
+            </article>
+
+            <!-- Project 3: Conecta -->
+            <article class="bg-bsurface border-3 border-btext p-8 md:p-12 transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-[12px:12px:0px:0px_var(--color-text)] brutal-fade flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-grow">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-baccent border border-baccent px-2 py-1 bg-bbg">Startup própria · 2022</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-tighter leading-none mb-4">
+                        Conecta — Plataforma de Trabalho</h2>
+                    <p class="text-lg opacity-80 mb-8 max-w-3xl leading-relaxed">
+                        Concepção e design de produto de uma plataforma para contratação de profissionais temporários em bares e restaurantes.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-0">
+                        <span class="text-[10px] uppercase font-bold opacity-50 tracking-widest">Product Design</span>
+                        <span class="text-[10px] uppercase font-bold opacity-50 tracking-widest">Branding</span>
+                    </div>
+                </div>
+                <button data-project="conecta-restaurantes" class="project-btn w-full md:w-auto border-2 border-btext px-10 py-4 font-bold uppercase text-xs hover:bg-btext hover:text-bbg transition-all whitespace-nowrap">
+                    Estudo de Caso →
+                </button>
+            </article>
+
+            <!-- Project 4: Minha Notificação -->
+            <article class="bg-bsurface border-3 border-btext p-8 md:p-12 transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-[12px:12px:0px:0px_var(--color-text)] brutal-fade flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-grow">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-baccent border border-baccent px-2 py-1 bg-bbg">Apple Academy · 2021</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-tighter leading-none mb-4">
+                        App de Bem-Estar Digital</h2>
+                    <p class="text-lg opacity-80 mb-8 max-w-3xl leading-relaxed">
+                        Interface mobile para aplicativo de controle de tempo de tela focado em personalização e mudança de hábitos.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-0">
+                        <span class="text-[10px] uppercase font-bold opacity-50 tracking-widest">Mobile Design</span>
+                        <span class="text-[10px] uppercase font-bold opacity-50 tracking-widest">UX UI</span>
+                    </div>
+                </div>
+                <button data-project="minha-notificacao" class="project-btn w-full md:w-auto border-2 border-btext px-10 py-4 font-bold uppercase text-xs hover:bg-btext hover:text-bbg transition-all whitespace-nowrap">
+                    Estudo de Caso →
+                </button>
+            </article>
+
+            <!-- Project 5: Banco Tree -->
+            <article class="bg-bsurface border-3 border-btext p-8 md:p-12 transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-[12px:12px:0px:0px_var(--color-text)] brutal-fade flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-grow">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-baccent border border-baccent px-2 py-1 bg-bbg">Industrial Design · 2022</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-tighter leading-none mb-4">
+                        Banco Tree — Mobiliário Urbano</h2>
+                    <p class="text-lg opacity-80 mb-8 max-w-3xl leading-relaxed">
+                        Mobiliário urbano sustentável utilizando pallets e integração com plantas para ativação de espaços públicos.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-0">
+                        <span class="text-[10px] uppercase font-bold opacity-50 tracking-widest">Industrial Design</span>
+                        <span class="text-[10px] uppercase font-bold opacity-50 tracking-widest">Sustainability</span>
+                    </div>
+                </div>
+                <button data-project="banco-tree" class="project-btn w-full md:w-auto border-2 border-btext px-10 py-4 font-bold uppercase text-xs hover:bg-btext hover:text-bbg transition-all whitespace-nowrap">
+                    Estudo de Caso →
+                </button>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+        class="border-t-3 border-btext p-6 flex flex-col md:flex-row justify-between items-center z-10 relative mt-auto bg-bbg">
+        <!-- Loaded dynamically from components.js -->
+    </footer>
+
+    <!-- PROJETOS MODAL -->
+    <div id="project-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300 p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-bbg bg-opacity-95 backdrop-blur-md"></div>
+
+        <!-- Modal Card -->
+        <div
+            class="modal-card relative w-full max-w-2xl bg-bsurface border-3 border-btext shadow-[12px_12px_0px_0px_var(--color-accent)] transform scale-95 transition-all duration-300 flex flex-col">
+            
+            <button
+                class="modal-close absolute top-4 right-4 text-2xl font-bold bg-bbg text-white hover:text-baccent transition-all leading-none w-10 h-10 flex items-center justify-center border-2 border-btext z-[60]"
+                aria-label="Fechar estudo de caso">&times;</button>
+            
+            <div id="modal-content" class="overflow-y-auto p-8 md:p-12 max-h-[85vh] custom-scrollbar">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

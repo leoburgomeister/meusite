@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Barbosa Burgomeister — Product Designer & UX</title>
+
+    <!-- Preconnect para performance de fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Check theme preference before rendering
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.add('light');
+        }
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bbg: 'var(--color-bg)',
+                        bsurface: 'var(--color-surface)',
+                        baccent: 'var(--color-accent)',
+                        btext: 'var(--color-text)',
+                    },
+                    borderWidth: { '3': '3px' },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+                    },
+                    keyframes: {
+                        'scan-line': {
+                            '0%': { backgroundPosition: '0 0' },
+                            '100%': { backgroundPosition: '0 100%' },
+                        },
+                        'cursor-blink': {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: 0 },
+                        }
+                    },
+                    animation: {
+                        'scan-line': 'scan-line 8s linear infinite',
+                        'cursor-blink': 'cursor-blink 1s step-end infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Portfólio de Leonardo Barbosa Burgomeister — Product Designer & UX focado em ambientes industriais e corporativos complexos. WEG, Whirlpool, Prefeitura de Jaraguá do Sul.">
+    <meta property="og:title" content="Leonardo Barbosa Burgomeister — Product Designer">
+    <meta property="og:description"
+        content="Product Designer especialista em transformar necessidades de negócio em interfaces funcionais.">
+    <meta name="robots" content="index, follow">
+</head>
+
+<body
+    class="bg-bbg text-btext font-sans antialiased overflow-x-hidden selection:bg-baccent selection:text-btext min-h-screen flex flex-col">
+
+    <div class="noise"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full bg-bbg bg-opacity-95 border-b-3 border-btext z-40 backdrop-blur-sm" role="navigation"
+        aria-label="Navegação principal">
+        <!-- Loaded dynamically from components/nav.html -->
+    </nav>
+
+    <!-- HERO -->
+    <main class="flex-grow flex flex-col justify-center max-w-[1200px] mx-auto px-6 lg:px-12 w-full pt-16 z-10 relative"
+        id="main-content">
+
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <!-- Brutalist Star Illustration -->
+            <svg class="absolute w-64 h-64 md:w-96 md:h-96 text-baccent opacity-[0.05] right-[-5%] top-[-10%] animate-[spin_30s_linear_infinite]"
+                viewBox="0 0 100 100" fill="currentColor">
+                <path d="M50 0 L55 45 L100 50 L55 55 L50 100 L45 55 L0 50 L45 45 Z" />
+            </svg>
+            <!-- Brutalist Grid Illustration -->
+            <svg class="absolute w-full h-full text-btext opacity-[0.03] left-0 bottom-0" width="100%" height="100%">
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1" />
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <!-- Decorative Geometric Lines (Brutalist) -->
+        <div class="absolute left-0 top-1/4 w-full h-px bg-btext opacity-10 pointer-events-none hidden lg:block"></div>
+        <div class="absolute left-0 bottom-1/4 w-full h-px bg-btext opacity-10 pointer-events-none hidden lg:block">
+        </div>
+        <div class="absolute right-16 top-0 h-full w-px bg-btext opacity-10 pointer-events-none hidden lg:block"></div>
+
+        <div class="brutal-fade delay-100 w-full relative z-10">
+            <!-- Kicker label -->
+            <p class="font-mono text-baccent mb-6 text-sm md:text-base uppercase tracking-[0.3em] block-reveal">
+                <span data-i18n="index_kicker">PRODUCT DESIGNER & UX RESEARCHER</span>
+            </p>
+
+            <!-- Main headline -->
+            <div class="mb-10 w-full overflow-hidden">
+                <h1 class="text-[clamp(3.5rem,12vw,10rem)] font-bold uppercase leading-[0.85] tracking-tighter break-words text-white"
+                    data-i18n="index_hello">
+                    HELLO,<br>WORLD.
+                </h1>
+            </div>
+
+            <!-- Subline + CTA row -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-12 w-full">
+                <div class="max-w-xl">
+                    <p
+                        class="text-xl md:text-2xl lg:text-3xl font-medium leading-snug block-reveal delay-200 text-btext">
+                        <span data-i18n="index_subtitle">Converto <strong class="text-white font-bold">necessidades de
+                                negócio</strong> em interfaces que funcionam de verdade.</span>
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 block-reveal delay-300 shrink-0">
+                    <a href="projetos.html"
+                        class="group border-3 border-btext bg-btext text-bbg font-bold uppercase px-8 py-4 text-base md:text-lg transition-all duration-300 ease-out hover:bg-transparent hover:text-btext hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#456882] flex items-center justify-center gap-2"
+                        aria-label="Ver meus projetos">
+                        <span data-i18n="index_btn_projects">VER PROJETOS</span>
+                        <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    </a>
+                    <a href="curriculo.html"
+                        class="group border-3 border-btext font-bold uppercase px-8 py-4 text-base md:text-lg transition-all duration-300 ease-out hover:bg-btext hover:text-bbg hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#456882] flex items-center justify-center gap-2"
+                        aria-label="Ver meu currículo">
+                        <span data-i18n="index_btn_resume">CURRÍCULO</span>
+                        <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats strip -->
+            <div
+                class="mt-16 pt-8 border-t-3 border-btext grid grid-cols-2 md:grid-cols-3 gap-8 brutal-fade delay-400 w-full">
+                <div>
+                    <p class="text-4xl md:text-5xl font-bold text-white mb-1">3+</p>
+                    <p class="font-mono text-xs uppercase tracking-widest text-baccent leading-tight"
+                        data-i18n="stats_exp">
+                        ANOS DE<br>EXPERIÊNCIA</p>
+                </div>
+                <div>
+                    <p class="text-4xl md:text-5xl font-bold text-white mb-1">3</p>
+                    <p class="font-mono text-xs uppercase tracking-widest text-baccent leading-tight"
+                        data-i18n="stats_active">GRANDES<br>EMPRESAS</p>
+                </div>
+                <div>
+                    <p class="text-4xl md:text-5xl font-bold text-white mb-1">3</p>
+                    <p class="font-mono text-xs uppercase tracking-widest text-baccent leading-tight"
+                        data-i18n="stats_clients">PRÊMIOS DE<br>INOVAÇÃO</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer
+        class="border-t-3 border-btext p-6 flex flex-col md:flex-row justify-between items-center z-10 relative mt-auto bg-bbg gap-4">
+        <!-- Loaded dynamically from components.js -->
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

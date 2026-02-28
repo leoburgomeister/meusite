@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preconnect para performance de fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Leonardo Barbosa Burgomeister — Currículo</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Check theme preference before rendering
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.add('light');
+        }
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bbg: 'var(--color-bg)',
+                        bsurface: 'var(--color-surface)',
+                        baccent: 'var(--color-accent)',
+                        btext: 'var(--color-text)',
+                    },
+                    borderWidth: {
+                        '3': '3px',
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Portfólio de Leonardo Barbosa Burgomeister, Product Designer e UX Designer focando em ambientes industriais e corporativos complexos.">
+</head>
+
+<body class="bg-bbg text-btext font-sans antialiased overflow-x-hidden selection:bg-baccent selection:text-btext">
+
+    <div class="noise"></div>
+
+    <!-- NAVIGATION MENU -->
+    <nav class="fixed top-0 w-full bg-bbg bg-opacity-95 border-b-3 border-btext z-40 backdrop-blur-sm" role="navigation"
+        aria-label="Navegação principal">
+        <!-- Loaded dynamically from components/nav.html -->
+    </nav>
+
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-12 pt-24 pb-12 relative z-10 cursor-default">
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <!-- Brutalist Star Illustration -->
+            <svg class="absolute w-64 h-64 md:w-96 md:h-96 text-baccent opacity-[0.05] right-[-5%] top-[-10%] animate-[spin_30s_linear_infinite]"
+                viewBox="0 0 100 100" fill="currentColor">
+                <path d="M50 0 L55 45 L100 50 L55 55 L50 100 L45 55 L0 50 L45 45 Z" />
+            </svg>
+            <!-- Brutalist Grid Illustration -->
+            <svg class="absolute w-full h-full text-btext opacity-[0.03] left-0 bottom-0" width="100%" height="100%">
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1" />
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <header class="border-b-3 border-btext pb-16 mb-16 brutal-fade z-10 relative">
+            <div class="mb-6 w-full">
+                <!-- Using word-break to ensure the huge text fits on mobile -->
+                <h1
+                    class="text-5xl md:text-7xl lg:text-[7rem] font-bold uppercase leading-[0.9] tracking-tighter break-words text-white">
+                    LEONARDO BARBOSA BURGOMEISTER
+                </h1>
+            </div>
+
+            <h2 class="text-xl md:text-2xl lg:text-3xl font-medium opacity-90 border-l-3 border-btext pl-5 py-2 mb-10 transition-colors duration-300 hover:border-baccent"
+                data-i18n="cv_header_role">
+                Product Designer | UX Designer | UX/UI
+            </h2>
+
+            <div class="flex flex-wrap items-center gap-4 mb-10">
+                <span
+                    class="bg-bsurface border border-baccent px-4 py-1.5 uppercase text-sm font-semibold tracking-wider"
+                    data-i18n="cv_location">
+                    Jaraguá do Sul, SC
+                </span>
+                <a href="https://www.linkedin.com/in/leoburgomeister/" target="_blank"
+                    class="border-3 border-btext font-bold uppercase px-8 py-3 transition-all duration-300 ease-out hover:bg-btext hover:text-bbg hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#456882] focus:outline-none focus:ring-4 focus:ring-baccent">
+                    LinkedIn ↗
+                </a>
+                <a href="https://github.com/leoburgomeister" target="_blank"
+                    class="border-3 border-btext font-bold uppercase px-8 py-3 transition-all duration-300 ease-out hover:bg-btext hover:text-bbg hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#456882] focus:outline-none focus:ring-4 focus:ring-baccent">
+                    GitHub ↗
+                </a>
+            </div>
+
+            <div class="text-sm md:text-base opacity-85 flex flex-wrap gap-2 items-center">
+                <p data-i18n="cv_lang_native"><strong class="font-bold opacity-100 text-white">Português</strong> Nativo
+                </p>
+                <span class="text-baccent font-bold mx-2">//</span>
+                <p data-i18n="cv_lang_en"><strong class="font-bold opacity-100 text-white">Inglês</strong> Intermediário
+                </p>
+                <span class="text-baccent font-bold mx-2">//</span>
+                <p data-i18n="cv_lang_es"><strong class="font-bold opacity-100 text-white">Espanhol</strong>
+                    Intermediário</p>
+            </div>
+        </header>
+
+        <main>
+            <!-- Summary Section -->
+            <section id="resumo" class="border-b-3 border-btext pb-16 mb-16 brutal-fade">
+                <div class="flex items-baseline gap-4 mb-8">
+                    <h3 class="text-2xl text-baccent font-bold">[01]</h3>
+                    <h2 class="text-3xl md:text-5xl font-bold uppercase tracking-tight block-reveal"><span
+                            data-i18n="cv_summary_title">RESUMO
+                            PROFISSIONAL</span></h2>
+                </div>
+                <div
+                    class="text-xl md:text-2xl leading-relaxed max-w-4xl opacity-90 hover:opacity-100 transition-opacity duration-300">
+                    <p data-i18n="cv_summary_text">
+                        Product Designer (UX-focused), com base técnica e experiência em ambientes corporativos e
+                        industriais. Atuo na interseção entre design, tecnologia e negócio, contribuindo para produtos,
+                        comunicação e processos mais claros, eficientes e orientados ao usuário. Tenho vivência em
+                        empresas de grande porte, portfólio de produtos, inovação e contextos multidisciplinares.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experiencia" class="border-b-3 border-btext pb-16 mb-16">
+                <div class="flex items-baseline gap-4 mb-12 brutal-fade">
+                    <h3 class="text-2xl text-baccent font-bold">[02]</h3>
+                    <h2 class="text-3xl md:text-5xl font-bold uppercase tracking-tight block-reveal"><span
+                            data-i18n="cv_exp_title">EXPERIÊNCIA
+                            PROFISSIONAL</span></h2>
+                </div>
+
+                <div class="space-y-8">
+                    <article
+                        class="group bg-bsurface border-3 border-btext p-8 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_#D2C1B6] stagger-item">
+                        <div
+                            class="flex flex-col md:flex-row md:justify-between md:items-baseline border-b-2 border-baccent pb-4 mb-6 transition-colors duration-300 group-hover:border-btext">
+                            <div>
+                                <h4 class="text-2xl font-bold text-white mb-1" data-i18n="cv_job1_company">Prefeitura de
+                                    Jaraguá do Sul</h4>
+                                <span class="text-lg font-semibold block" data-i18n="cv_job1_role">Secretário Escolar /
+                                    Designer de Serviço</span>
+                            </div>
+                            <span
+                                class="text-sm opacity-80 mt-2 md:mt-0 font-medium font-mono bg-bbg px-3 py-1 border border-baccent"
+                                data-i18n="cv_job1_date">Fev. 2025 – Atual</span>
+                        </div>
+                        <ul class="space-y-4 text-base md:text-lg opacity-90">
+                            <li class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-baccent before:font-bold group-hover:before:text-white transition-colors"
+                                data-i18n="cv_job1_b1">
+                                <strong class="text-white">Otimização de Atendimento:</strong> Desenvolvi e implementei
+                                uma automação de atendimento via WhatsApp, reduzindo o tempo de espera e organizando o
+                                fluxo de demandas para diversos perfis de usuários.
+                            </li>
+                            <li class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-baccent before:font-bold group-hover:before:text-white transition-colors"
+                                data-i18n="cv_job1_b2">
+                                <strong class="text-white">Comunicação Visual:</strong> Projetei materiais informativos
+                                focados em usabilidade para garantir a clareza da informação em processos
+                                administrativos complexos.
+                            </li>
+                            <li class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-baccent before:font-bold group-hover:before:text-white transition-colors"
+                                data-i18n="cv_job1_b3">
+                                <strong class="text-white">Gestão de Processos:</strong> Estruturei fluxos de
+                                comunicação interna que aumentaram a agilidade na recuperação de documentos e
+                                organização de pautas.
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article
+                        class="group bg-bsurface border-3 border-btext p-8 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_#D2C1B6] stagger-item">
+                        <div
+                            class="flex flex-col md:flex-row md:justify-between md:items-baseline border-b-2 border-baccent pb-4 mb-6 transition-colors duration-300 group-hover:border-btext">
+                            <div>
+                                <h4 class="text-2xl font-bold text-white mb-1" data-i18n="cv_job2_company">WEG Automação
+                                </h4>
+                                <span class="text-lg font-semibold block" data-i18n="cv_job2_role">Estagiário em
+                                    Portfólio de Produtos e Marketing</span>
+                            </div>
+                            <span
+                                class="text-sm opacity-80 mt-2 md:mt-0 font-medium font-mono bg-bbg px-3 py-1 border border-baccent"
+                                data-i18n="cv_job2_date">Ago. 2024 – Fev. 2025</span>
+                        </div>
+                        <ul class="space-y-4 text-base md:text-lg opacity-90">
+                            <li class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-baccent before:font-bold group-hover:before:text-white transition-colors"
+                                data-i18n="cv_job2_b1">
+                                <strong class="text-white">Automação de Dados:</strong> Automatizei fluxos de trabalho
+                                utilizando Microsoft Power Platform, integrando dados entre áreas técnicas e comerciais,
+                                o que resultou em maior agilidade na análise de mercado.
+                            </li>
+                            <li class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-baccent before:font-bold group-hover:before:text-white transition-colors"
+                                data-i18n="cv_job2_b2">
+                                <strong class="text-white">Design de Interface (UI):</strong> Desenvolvi materiais
+                                técnicos e comerciais com foco em consistência visual e arquitetura da informação,
+                                facilitando o entendimento do usuário final sobre produtos complexos.
+                            </li>
+                            <li class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-baccent before:font-bold group-hover:before:text-white transition-colors"
+                                data-i18n="cv_job2_b3">
+                                <strong class="text-white">Gestão de Stakeholders:</strong> Atuei como ponte entre
+                                engenharia e marketing para garantir que os requisitos técnicos fossem traduzidos em
+                                propostas de valor claras no portfólio de produtos.
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article
+                        class="group bg-bsurface border-3 border-btext p-8 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_#D2C1B6] stagger-item">
+                        <div
+                            class="flex flex-col md:flex-row md:justify-between md:items-baseline border-b-2 border-baccent pb-4 mb-6 transition-colors duration-300 group-hover:border-btext">
+                            <div>
+                                <h4 class="text-2xl font-bold text-white mb-1" data-i18n="cv_job3_company">Whirlpool
+                                    S.A.</h4>
+                                <span class="text-lg font-semibold block" data-i18n="cv_job3_role">Estagiário em
+                                    Comunicação Institucional</span>
+                            </div>
+                            <span
+                                class="text-sm opacity-80 mt-2 md:mt-0 font-medium font-mono bg-bbg px-3 py-1 border border-baccent"
+                                data-i18n="cv_job3_date">Nov. 2022 – Ago. 2024</span>
+                        </div>
+                        <ul class="space-y-4 text-base md:text-lg opacity-90">
+                            <li class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-baccent before:font-bold group-hover:before:text-white transition-colors"
+                                data-i18n="cv_job3_b1">
+                                <strong class="text-white">Experiência do Usuário (UX):</strong> Participei da
+                                implementação de um sistema inteligente de gerenciamento de pautas, priorizando a
+                                clareza da informação e a jornada do colaborador dentro do ecossistema digital da
+                                empresa.
+                            </li>
+                            <li class="relative pl-6 before:content-['→'] before:absolute before:left-0 before:text-baccent before:font-bold group-hover:before:text-white transition-colors"
+                                data-i18n="cv_job3_b2">
+                                <strong class="text-white">Comunicação Multidisciplinar:</strong> Apoiei projetos
+                                globais de ESG, Inovação e RH, garantindo que a comunicação interna fosse acessível e
+                                eficiente em ambientes corporativos de larga escala.
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="formacao" class="border-b-3 border-btext pb-16 mb-16">
+                <div class="flex items-baseline gap-4 mb-12 brutal-fade">
+                    <h3 class="text-2xl text-baccent font-bold">[03]</h3>
+                    <h2 class="text-3xl md:text-5xl font-bold uppercase tracking-tight block-reveal"><span
+                            data-i18n="cv_edu_title">FORMAÇÃO
+                            ACADÊMICA</span></h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-item">
+                    <div class="border-3 border-btext p-8 transition-colors duration-300 hover:bg-bsurface group">
+                        <h4 class="text-2xl font-bold text-white mb-2 group-hover:text-baccent transition-colors"
+                            data-i18n="cv_edu1_title">Pós-graduação em UX/UI</h4>
+                        <p class="text-xl mb-6 opacity-90" data-i18n="cv_edu1_school">Faculeste</p>
+                        <span
+                            class="bg-bbg border border-baccent px-3 py-1 text-sm uppercase tracking-wider font-mono inline-block shadow-[3px_3px_0px_0px_#456882]"
+                            data-i18n="cv_edu1_date">Conclusão Prevista: 2025</span>
+                    </div>
+
+                    <div class="border-3 border-btext p-8 transition-colors duration-300 hover:bg-bsurface group">
+                        <h4 class="text-2xl font-bold text-white mb-2 group-hover:text-baccent transition-colors"
+                            data-i18n="cv_edu2_title">Bacharelado em Design</h4>
+                        <p class="text-xl mb-6 opacity-90" data-i18n="cv_edu2_school">Católica de Santa Catarina</p>
+                        <span
+                            class="bg-bbg border border-baccent px-3 py-1 text-sm uppercase tracking-wider font-mono inline-block shadow-[3px_3px_0px_0px_#456882]"
+                            data-i18n="cv_edu2_date">Concluído em 2024</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="habilidades" class="border-b-3 border-btext pb-16 mb-16">
+                <div class="flex items-baseline gap-4 mb-12 brutal-fade">
+                    <h3 class="text-2xl text-baccent font-bold">[04]</h3>
+                    <h2 class="text-3xl md:text-5xl font-bold uppercase tracking-tight block-reveal delay-100">
+                        <span data-i18n="cv_skills_title">HABILIDADES E COMPETÊNCIAS</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="border-t-3 border-btext pt-6 stagger-item">
+                        <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-wide" data-i18n="cv_skill_cat1">
+                            UX/UI Design</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default"
+                                data-i18n="cv_skill_user_research">User Research</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default"
+                                data-i18n="cv_skill_wireframing">Wireframing</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default"
+                                data-i18n="cv_skill_proto_alta">Prototipagem Alta Fidelidade</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default"
+                                data-i18n="cv_skill_info_arch">Arquitetura da Informação</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default"
+                                data-i18n="cv_skill_usability_tests">Testes de Usabilidade</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default"
+                                data-i18n="cv_skill_design_systems">Design Systems</span>
+                        </div>
+                    </div>
+
+                    <div class="border-t-3 border-btext pt-6 stagger-item">
+                        <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-wide" data-i18n="cv_skill_cat2">
+                            Ferramentas</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm bg-bsurface hover:bg-btext hover:text-bbg transition-colors duration-200 font-bold cursor-default"
+                                data-i18n="cv_skill_figma">Figma (Avançado)</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default">Photoshop</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default">Illustrator</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default">Microsoft
+                                365</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default">Google
+                                Workspace</span>
+                        </div>
+                    </div>
+
+                    <div class="border-t-3 border-btext pt-6 stagger-item">
+                        <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-wide" data-i18n="cv_skill_cat3">
+                            Tecnologia & No-Code</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default font-mono">HTML5</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default font-mono">CSS3</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default font-mono">JavaScript</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default font-mono">C</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default">Power
+                                Automate</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default">Power
+                                Apps</span>
+                        </div>
+                    </div>
+
+                    <div class="border-t-3 border-btext pt-6 stagger-item">
+                        <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-wide" data-i18n="cv_skill_cat4">
+                            Metodologias</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default">Design
+                                Thinking</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default">Lean
+                                UX</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default font-bold">Agile</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default font-bold">Scrum</span>
+                            <span
+                                class="border border-baccent px-3 py-1.5 text-sm hover:bg-btext hover:text-bbg transition-colors duration-200 cursor-default font-bold">Kanban</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Awards Section -->
+            <section id="premios" class="pb-8">
+                <div class="flex items-baseline gap-4 mb-12 brutal-fade">
+                    <h3 class="text-2xl text-baccent font-bold">[05]</h3>
+                    <h2 class="text-3xl md:text-5xl font-bold uppercase tracking-tight block-reveal delay-200">
+                        <span data-i18n="cv_awards_title">PRÊMIOS E INOVAÇÃO</span>
+                    </h2>
+                </div>
+
+                <div class="flex flex-col gap-8">
+                    <!-- New Award: WINS Connect 2024 -->
+                    <div
+                        class="border-l-4 border-btext pl-6 py-2 transition-all duration-300 hover:border-baccent hover:pl-8 group stagger-item">
+                        <div class="flex flex-wrap items-baseline gap-3 mb-2">
+                            <h4 class="text-2xl font-bold text-white transition-colors group-hover:text-baccent"
+                                data-i18n="cv_award3_title">1º Lugar no WINS Connect 2024</h4>
+                            <span class="font-mono bg-btext text-bbg px-2 py-0.5 font-bold text-sm"
+                                data-i18n="cv_award3_date">2024</span>
+                        </div>
+                        <p class="text-lg opacity-90 max-w-3xl" data-i18n="cv_award3_desc">Evento de inovação interna da
+                            WEG focado em soluções tecnológicas e de negócio.</p>
+                    </div>
+
+                    <div
+                        class="border-l-4 border-btext pl-6 py-2 transition-all duration-300 hover:border-baccent hover:pl-8 group stagger-item">
+                        <div class="flex flex-wrap items-baseline gap-3 mb-2">
+                            <h4 class="text-2xl font-bold text-white transition-colors group-hover:text-baccent"
+                                data-i18n="cv_award1_title">2º Lugar no Programa NaSCer (FAPESC)</h4>
+                            <span class="font-mono bg-btext text-bbg px-2 py-0.5 font-bold text-sm"
+                                data-i18n="cv_award1_date">2023</span>
+                        </div>
+                        <p class="text-lg opacity-90 max-w-3xl" data-i18n="cv_award1_desc">Desenvolvimento de solução
+                            focada em modelo de negócio e viabilidade tecnológica.</p>
+                    </div>
+
+                    <div
+                        class="border-l-4 border-btext pl-6 py-2 transition-all duration-300 hover:border-baccent hover:pl-8 group stagger-item">
+                        <div class="flex flex-wrap items-baseline gap-3 mb-2">
+                            <h4 class="text-2xl font-bold text-white transition-colors group-hover:text-baccent"
+                                data-i18n="cv_award2_title">2º Lugar no Startup Weekend</h4>
+                            <span class="font-mono bg-btext text-bbg px-2 py-0.5 font-bold text-sm"
+                                data-i18n="cv_award2_date">2022</span>
+                        </div>
+                        <p class="text-lg opacity-90 max-w-3xl" data-i18n="cv_award2_desc">Criação de MVP e validação de
+                            produto em 54 horas.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer
+            class="border-t-3 border-btext pt-8 mt-16 flex flex-col md:flex-row justify-between items-center gap-6 stagger-item">
+            <!-- Loaded dynamically from components.js -->
+        </footer>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
