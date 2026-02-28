@@ -201,6 +201,7 @@ function initProjects() {
                     <ul class="space-y-2 opacity-90">
                         <li class="pl-4 border-l-2 border-baccent">Aplicación interna funcional en producción</li>
                         <li class="pl-4 border-l-2 border-baccent">Actualización de estados automatizada entre sistemas</li>
+                        <li class="pl-4 border-l-2 border-baccent">Reducción de errores y retrabalho en el control de puntos de venta</li>
                     </ul>`
             }
         },
@@ -228,7 +229,7 @@ function initProjects() {
                 results: `
                     <ul class="space-y-2 opacity-90">
                         <li class="pl-4 border-l-2 border-baccent">2nd place at Techstars Startup Weekend</li>
-                        <li class="pl-4 border-l-2 border-baccent">Admitted to Nascer Startup Acceleration</li>
+                        <li class="pl-4 border-l-2 border-baccent">Admitido to Nascer Startup Acceleration</li>
                     </ul>`
             },
             es: {
